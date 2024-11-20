@@ -33,6 +33,7 @@ export const runMetrics = (): void => {
     timeoutId && clearTimeout(timeoutId);
     timeoutId = setTimeout(() => {
       cleanUp && cleanUp();
+      console.log('LCP entry: ', lastPerformanceEntry);
     }, cbTimeout);
   };
 
